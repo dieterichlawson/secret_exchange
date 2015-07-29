@@ -10,9 +10,9 @@ tar xf signed_plaintext.tar
 openssl dgst -sha256 -verify $SENDER_PUBLIC_KEY -signature signature addressed_plaintext.tar
 tar xf addressed_plaintext.tar
 if diff to.pem $RECIPIENT_PUBLIC_KEY >/dev/null ; then
-    echo "Adress verified"
+    echo "Address verified"
   else
-    echo "Adress verification failed"
+    echo "Address verification failed"
 fi
 cat plaintext
 rm aes_pwd.enc aes_pwd signed_plaintext.enc signed_plaintext.tar \

@@ -49,7 +49,7 @@ The packing script performs the following steps:
 
 * adds the plaintext and the public key of the recipient to a tarfile.
 * signs a digest of the "addressed" tarfile
-* combines the signature and adressed tarfile into a new tarfile
+* combines the signature and addressed tarfile into a new tarfile
 * generates a random AES key
 * encryptes the signed tar file with AES-256
 * encrypts the AES key with the recipient's public key
@@ -62,5 +62,5 @@ The unpacking script performs the following steps:
 * uses the recipient's private key to decrypt the AES key
 * uses the AES key to decrypt the encrypted signed tarfile
 * unpacks the signed tarfile and verifies the signature
-* unpacks the adressed tarfile (which was in the signed tarfile) and verifies the adress
+* unpacks the addressed tarfile (which was in the signed tarfile) and verifies the address
 * `cat`s the plaintext
